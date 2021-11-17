@@ -3,15 +3,15 @@ import java.util.Scanner;
 import java.util.regex.*;
 
 public class JavaRegex {
-    public void email() {
+    public void mobileNum() {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter Email of User: ");
-        String eMail = sc.next();
-        boolean check = Pattern.matches("^[a-z]*([.]?[a-z]+)*@bl[.]co([.]?in)*", eMail);
+        System.out.print("Enter Mobile number with country code : ");
+        String mobileNum = sc.nextLine();
+        boolean check = Pattern.matches("^91\\s[6789][0-9]{9}", mobileNum);
         if (check)
-            System.out.println("Valid Email");
+            System.out.println("Valid Mobile Number ");
         else
-            System.out.println("Please Enter a Valid Email with Only \"example.abc@bl.co.in\" letter");
+            System.out.println("Please Enter a Valid Mobile Num ex:- 91 9052824862");
     }
 
     public static void main(String[] args) {
@@ -20,7 +20,8 @@ public class JavaRegex {
 
         System.out.println("Welcome to User Registration Program");
 
-        user.email();
+
+        user.mobileNum();
     }
 }
 

@@ -3,25 +3,26 @@ import java.util.Scanner;
 import java.util.regex.*;
 
 public class JavaRegex {
-    Scanner sc = new Scanner(System.in);
-    public void firstNameCheck() {
-        System.out.print("Enter First Name of User: ");
-        String fName = sc.next();
-        boolean check = Pattern.matches("^[A-Z]{1}+[a-z]{3,}$", fName);
+    public void lastNameCheck(){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter Last Name of User: " );
+        String  lName = sc.next();
+        boolean check = Pattern.matches("^[A-Z]{1}+[a-z]{3,}$", lName);
         if (check)
-            System.out.println("Valid First Name");
+            System.out.println("Valid Last Name");
         else
-            System.out.println("Please Enter a Valid First name with only \"One Starting Capital\" letter");
+            System.out.println("Please Enter a Valid Last Name with Only \"One Starting Capital\" letter");
     }
-
-    public static void main (String[]args){
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         JavaRegex user = new JavaRegex();
 
         System.out.println("Welcome to User Registration Program");
 
-        user.firstNameCheck();
+
+        user.lastNameCheck();
     }
 }
+
 
 

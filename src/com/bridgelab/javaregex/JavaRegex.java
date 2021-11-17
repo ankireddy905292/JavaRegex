@@ -3,19 +3,16 @@ import java.util.Scanner;
 import java.util.regex.*;
 
 public class JavaRegex{
-
-    // rule1  minimum 8 characters
-
-    public void passWordRule1() {
+    // rule2  minimum 8 characters with 1 upper case
+    public void passWordRule2() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter password :  ");
         String passWord = sc.nextLine();
-        boolean check = Pattern.matches("[a-zA-Z]{8,}", passWord);
+        boolean check = Pattern.matches("[A-Z]{1}[a-z]{7,}", passWord);
         if (check)
-            System.out.println("Valid PassWord");
+            System.out.println("Password Valid");
         else
-            System.out.println("Please Enter a Valid password, it should have minimum 8 characters");
-
+            System.out.println("Please Enter a Valid password, it should have minimum 8 characters with 1 upper case");
     }
 
     public static void main(String[] args) {
@@ -24,6 +21,6 @@ public class JavaRegex{
 
         System.out.println("Welcome to User Registration Program");
 
-        user.passWordRule1();
+        user.passWordRule2();
     }
 }
